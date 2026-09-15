@@ -73,7 +73,7 @@
   }
 
   // Build mailto
-  const to      = 'thewellspringmedia@gmail.com';
+  const to      = 'samuel@wellspringmedia.net';
   const subject = encodeURIComponent(
     `Project Inquiry${service ? ' — ' + service : ''} from ${firstName} ${lastName}`
   );
