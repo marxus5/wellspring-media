@@ -42,16 +42,18 @@
   const firstName = document.querySelector('input[placeholder="Jordan"]').value.trim();
   const lastName  = document.querySelector('input[placeholder="Ellis"]').value.trim();
   const email     = document.querySelector('input[type="email"]').value.trim();
+  const phone     = document.querySelector('input[type="tel"]').value.trim();
   const service   = document.querySelector('select').value;
   const message   = document.querySelector('textarea').value.trim();
 
   // Basic validation — highlight empty required fields
   let valid = true;
-  [firstName, lastName, email, message].forEach((val, i) => {
+  [firstName, lastName, email, phone, message].forEach((val, i) => {
     const fields = [
       document.querySelector('input[placeholder="Jordan"]'),
       document.querySelector('input[placeholder="Ellis"]'),
       document.querySelector('input[type="email"]'),
+      document.querySelector('input[type="tel"]'),
       document.querySelector('textarea'),
     ];
     if (!val) {
@@ -80,6 +82,7 @@
   const body = encodeURIComponent(
     `Name: ${firstName} ${lastName}\n` +
     `Email: ${email}\n` +
+    `Phone: ${phone}\n` +
     `Service: ${service || 'Not specified'}\n\n` +
     `Message:\n${message}`
   );
